@@ -163,19 +163,19 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
         [application setStatusBarHidden:YES];
     }
     
-    self.originalNavigationControllerNavigationBarHidden = self.navigationController.navigationBarHidden;
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    //self.originalNavigationControllerNavigationBarHidden = self.navigationController.navigationBarHidden;
+    //[self.navigationController setNavigationBarHidden:YES animated:NO];
     
-    self.originalNavigationControllerNavigationBarShadowImage = self.navigationController.navigationBar.shadowImage;
-    self.navigationController.navigationBar.shadowImage = nil;
+    //self.originalNavigationControllerNavigationBarShadowImage = self.navigationController.navigationBar.shadowImage;
+    //self.navigationController.navigationBar.shadowImage = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    self.originalNavigationControllerViewBackgroundColor = self.navigationController.view.backgroundColor;
-    self.navigationController.view.backgroundColor = [UIColor blackColor];
+    //self.originalNavigationControllerViewBackgroundColor = self.navigationController.view.backgroundColor;
+    //self.navigationController.view.backgroundColor = [UIColor blackColor];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -187,9 +187,9 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
         [application setStatusBarHidden:self.originalStatusBarHidden];
     }
     
-    [self.navigationController setNavigationBarHidden:self.originalNavigationControllerNavigationBarHidden animated:animated];
-    self.navigationController.navigationBar.shadowImage = self.originalNavigationControllerNavigationBarShadowImage;
-    self.navigationController.view.backgroundColor = self.originalNavigationControllerViewBackgroundColor;
+    //[self.navigationController setNavigationBarHidden:self.originalNavigationControllerNavigationBarHidden animated:animated];
+    //self.navigationController.navigationBar.shadowImage = self.originalNavigationControllerNavigationBarShadowImage;
+    //self.navigationController.view.backgroundColor = self.originalNavigationControllerViewBackgroundColor;
 }
 
 - (void)viewWillLayoutSubviews

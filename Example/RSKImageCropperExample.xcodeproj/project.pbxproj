@@ -310,10 +310,10 @@
 				ORGANIZATIONNAME = "Ruslan Skorb";
 				TargetAttributes = {
 					B87A99EB19A4D2CD00D12CD4 = {
-						DevelopmentTeam = J3P7YV7464;
+						DevelopmentTeam = BMYK56U646;
 					};
 					B87A9A0619A4D2CD00D12CD4 = {
-						DevelopmentTeam = J3P7YV7464;
+						DevelopmentTeam = BMYK56U646;
 						TestTargetID = B87A99EB19A4D2CD00D12CD4;
 					};
 				};
@@ -568,11 +568,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = J3P7YV7464;
+				DEVELOPMENT_TEAM = BMYK56U646;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSKImageCropperExample/RSKImageCropperExample-Prefix.pch";
 				INFOPLIST_FILE = "RSKImageCropperExample/RSKImageCropperExample-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ruslanskorb.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hatenablog.otukutun.rskimage;
 				PRODUCT_NAME = RSKImageCropperExample;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -584,11 +584,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = J3P7YV7464;
+				DEVELOPMENT_TEAM = BMYK56U646;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSKImageCropperExample/RSKImageCropperExample-Prefix.pch";
 				INFOPLIST_FILE = "RSKImageCropperExample/RSKImageCropperExample-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ruslanskorb.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hatenablog.otukutun.rskimage;
 				PRODUCT_NAME = RSKImageCropperExample;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -600,7 +600,7 @@
 			baseConfigurationReference = 0C150E48F85DA51945C85DA1 /* Pods-RSKImageCropperExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RSKImageCropperExample.app/RSKImageCropperExample";
-				DEVELOPMENT_TEAM = J3P7YV7464;
+				DEVELOPMENT_TEAM = BMYK56U646;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -624,7 +624,7 @@
 			baseConfigurationReference = 920CDB33366A5C7417CF0915 /* Pods-RSKImageCropperExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RSKImageCropperExample.app/RSKImageCropperExample";
-				DEVELOPMENT_TEAM = J3P7YV7464;
+				DEVELOPMENT_TEAM = BMYK56U646;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
