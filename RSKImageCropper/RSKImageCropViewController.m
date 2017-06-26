@@ -151,6 +151,16 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     
     [self.view addGestureRecognizer:self.doubleTapGestureRecognizer];
     [self.view addGestureRecognizer:self.rotationGestureRecognizer];
+    
+    
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle: @"次へ" style: UIBarButtonItemStylePlain target: self action: @selector(onChooseButtonTouch:)];
+    
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+    
+    
+    [self.moveAndScaleLabel setHidden:true];
+    [self.cancelButton setHidden:true];
+    [self.chooseButton setHidden:true];
 }
 
 - (void)viewWillAppear:(BOOL)animated

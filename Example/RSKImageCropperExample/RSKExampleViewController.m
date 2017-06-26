@@ -49,7 +49,7 @@ static const CGFloat kPhotoFrameViewPadding = 2.0f;
     }
     
     self.navigationItem.title = @"RSKImageCropper";
-    
+        
     // ---------------------------
     // Add the frame of the photo.
     // ---------------------------
@@ -143,6 +143,7 @@ static const CGFloat kPhotoFrameViewPadding = 2.0f;
     
     self.didSetupConstraints = YES;
 }
+
 
 #pragma mark - Action handling
 
