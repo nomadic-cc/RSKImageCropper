@@ -154,7 +154,9 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     
     
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle: @"次へ" style: UIBarButtonItemStylePlain target: self action: @selector(onChooseButtonTouch:)];
+
     
+    [rightBarButton setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize: 18.0]} forState: UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = rightBarButton;
     
     
