@@ -128,7 +128,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 - (void)viewDidLoad
@@ -172,7 +172,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     UIApplication *application = [UIApplication rsk_sharedApplication];
     if (application) {
         self.originalStatusBarHidden = application.statusBarHidden;
-        [application setStatusBarHidden:YES];
+        [application setStatusBarHidden:NO];
     }
     
     //self.originalNavigationControllerNavigationBarHidden = self.navigationController.navigationBarHidden;
