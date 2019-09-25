@@ -128,7 +128,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 - (void)viewDidLoad
@@ -172,7 +172,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     UIApplication *application = [UIApplication rsk_sharedApplication];
     if (application) {
         self.originalStatusBarHidden = application.statusBarHidden;
-        [application setStatusBarHidden:YES];
+        [application setStatusBarHidden:NO];
     }
     
     //self.originalNavigationControllerNavigationBarHidden = self.navigationController.navigationBarHidden;
@@ -960,11 +960,18 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
     if ([self.delegate respondsToSelector:@selector(imageCropViewController:willCropImage:)]) {
         [self.delegate imageCropViewController:self willCropImage:self.originalImage];
     }
+    
+    UIImage *originalImage = self.originalImage;
+    RSKImageCropMode cropMode = self.cropMode;
+    CGRect cropRect = self.cropRect;
+    CGFloat rotationAngle = self.rotationAngle;
+    CGFloat zoomScale = self.imageScrollView.zoomScale;
+    UIBezierPath *maskPath = self.maskPath;
+    BOOL applyMaskToCroppedImage = self.applyMaskToCroppedImage;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        CGRect cropRect = self.cropRect;
-        CGFloat rotationAngle = self.rotationAngle;
         
-        UIImage *croppedImage = [self croppedImage:self.originalImage cropMode:self.cropMode cropRect:cropRect rotationAngle:rotationAngle zoomScale:self.imageScrollView.zoomScale maskPath:self.maskPath applyMaskToCroppedImage:self.applyMaskToCroppedImage];
+        UIImage *croppedImage = [self croppedImage:originalImage cropMode:cropMode cropRect:cropRect rotationAngle:rotationAngle zoomScale:zoomScale maskPath:maskPath applyMaskToCroppedImage:applyMaskToCroppedImage];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self.delegate respondsToSelector:@selector(imageCropViewController:didCropImage:usingCropRect:rotationAngle:)]) {
